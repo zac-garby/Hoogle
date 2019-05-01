@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0A1ACD5227A4090007A22B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A1ACD4227A4090007A22B8 /* ViewController.swift */; };
+		B0B64C10227766FD00048272 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B64C0F227766FD00048272 /* SidebarViewController.swift */; };
 		B0FE033A2275BCD000ED67A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE03392275BCD000ED67A7 /* AppDelegate.swift */; };
-		B0FE033C2275BCD000ED67A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE033B2275BCD000ED67A7 /* ViewController.swift */; };
+		B0FE033C2275BCD000ED67A7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE033B2275BCD000ED67A7 /* DetailViewController.swift */; };
 		B0FE033F2275BCD000ED67A7 /* Hoogle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0FE033D2275BCD000ED67A7 /* Hoogle.xcdatamodeld */; };
 		B0FE03412275BCD200ED67A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0FE03402275BCD200ED67A7 /* Assets.xcassets */; };
 		B0FE03442275BCD200ED67A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0FE03422275BCD200ED67A7 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B0A1ACD4227A4090007A22B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0B64C0F227766FD00048272 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		B0FE03362275BCD000ED67A7 /* Hoogle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoogle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FE03392275BCD000ED67A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B0FE033B2275BCD000ED67A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0FE033B2275BCD000ED67A7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B0FE033E2275BCD000ED67A7 /* Hoogle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hoogle.xcdatamodel; sourceTree = "<group>"; };
 		B0FE03402275BCD200ED67A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0FE03432275BCD200ED67A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,12 +60,14 @@
 			isa = PBXGroup;
 			children = (
 				B0FE03392275BCD000ED67A7 /* AppDelegate.swift */,
-				B0FE033B2275BCD000ED67A7 /* ViewController.swift */,
-				B0FE03402275BCD200ED67A7 /* Assets.xcassets */,
+				B0A1ACD4227A4090007A22B8 /* ViewController.swift */,
+				B0FE033B2275BCD000ED67A7 /* DetailViewController.swift */,
+				B0B64C0F227766FD00048272 /* SidebarViewController.swift */,
 				B0FE03422275BCD200ED67A7 /* Main.storyboard */,
-				B0FE03452275BCD200ED67A7 /* Info.plist */,
 				B0FE03462275BCD200ED67A7 /* Hoogle.entitlements */,
+				B0FE03452275BCD200ED67A7 /* Info.plist */,
 				B0FE033D2275BCD000ED67A7 /* Hoogle.xcdatamodeld */,
+				B0FE03402275BCD200ED67A7 /* Assets.xcassets */,
 			);
 			path = Hoogle;
 			sourceTree = "<group>";
@@ -98,6 +104,11 @@
 				TargetAttributes = {
 					B0FE03352275BCD000ED67A7 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -136,9 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0FE033C2275BCD000ED67A7 /* ViewController.swift in Sources */,
+				B0A1ACD5227A4090007A22B8 /* ViewController.swift in Sources */,
+				B0FE033C2275BCD000ED67A7 /* DetailViewController.swift in Sources */,
 				B0FE033F2275BCD000ED67A7 /* Hoogle.xcdatamodeld in Sources */,
 				B0FE033A2275BCD000ED67A7 /* AppDelegate.swift in Sources */,
+				B0B64C10227766FD00048272 /* SidebarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +288,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Hoogle/Hoogle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZX7M3HPXGX;
@@ -294,7 +306,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Hoogle/Hoogle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZX7M3HPXGX;
