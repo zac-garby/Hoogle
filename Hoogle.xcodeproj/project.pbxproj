@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B0A1ACD5227A4090007A22B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A1ACD4227A4090007A22B8 /* ViewController.swift */; };
+		B0A1ACD8227A43CF007A22B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A1ACD7227A43CF007A22B8 /* Alamofire.framework */; };
 		B0B64C10227766FD00048272 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B64C0F227766FD00048272 /* SidebarViewController.swift */; };
 		B0FE033A2275BCD000ED67A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE03392275BCD000ED67A7 /* AppDelegate.swift */; };
 		B0FE033C2275BCD000ED67A7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE033B2275BCD000ED67A7 /* DetailViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		B0A1ACD4227A4090007A22B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0A1ACD7227A43CF007A22B8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		B0B64C0F227766FD00048272 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		B0FE03362275BCD000ED67A7 /* Hoogle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoogle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FE03392275BCD000ED67A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,17 +36,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A1ACD8227A43CF007A22B8 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0A1ACD6227A43CF007A22B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0A1ACD7227A43CF007A22B8 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B0FE032D2275BCD000ED67A7 = {
 			isa = PBXGroup;
 			children = (
 				B0FE03382275BCD000ED67A7 /* Hoogle */,
 				B0FE03372275BCD000ED67A7 /* Products */,
+				B0A1ACD6227A43CF007A22B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +94,7 @@
 				B0FE03322275BCD000ED67A7 /* Sources */,
 				B0FE03332275BCD000ED67A7 /* Frameworks */,
 				B0FE03342275BCD000ED67A7 /* Resources */,
+				B0A1ACD9227A43E0007A22B8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -141,6 +154,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B0A1ACD9227A43E0007A22B8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Alamofire.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B0FE03322275BCD000ED67A7 /* Sources */ = {
@@ -291,6 +326,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZX7M3HPXGX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Hoogle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +348,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZX7M3HPXGX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Hoogle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

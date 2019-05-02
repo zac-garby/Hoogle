@@ -11,10 +11,7 @@ import Cocoa
 class SidebarViewController: NSViewController {
     @IBOutlet weak var resultsTable: NSTableView!
     
-    var results = [
-        "map :: (a -> b) -> [a] -> [b]",
-        "map :: (a -> b) -> NonEmpty a -> NonEmpty b"
-    ]
+    var results: [Result] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +19,32 @@ class SidebarViewController: NSViewController {
         resultsTable.delegate = self
         resultsTable.dataSource = self
     }
+    
+    func updateData() {
+        resultsTable.reloadData()
+    }
 }
 
 extension SidebarViewController: NSTableViewDelegate {
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let ident = NSUserInterfaceItemIdentifier(rawValue: "Result")
-        let image = NSImage(named: "function")
-        let text = results[row]
+        let image: NSImage
+        let result = results[row]
+        
+        switch result.kind {
+        case .function:
+            image = NSImage(named: "function")!
+        case .module:
+            image = NSImage(named: "module")!
+        case .package:
+            image = NSImage(named: "package")!
+        case .type:
+            image = NSImage(named: "type")!
+        }
         
         if let cell = tableView.makeView(withIdentifier: ident, owner: nil) as? NSTableCellView {
-            cell.textField?.stringValue = text
-            cell.imageView?.image = image ?? nil
+            cell.textField?.stringValue = result.item
+            cell.imageView?.image = image
             return cell
         }
         
