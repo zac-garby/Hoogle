@@ -10,6 +10,7 @@
 		B0A1ACD5227A4090007A22B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A1ACD4227A4090007A22B8 /* ViewController.swift */; };
 		B0A1ACD8227A43CF007A22B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A1ACD7227A43CF007A22B8 /* Alamofire.framework */; };
 		B0B64C10227766FD00048272 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B64C0F227766FD00048272 /* SidebarViewController.swift */; };
+		B0F53514227C93CD00F95DC4 /* ResultCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F53513227C93CD00F95DC4 /* ResultCellView.swift */; };
 		B0FE033A2275BCD000ED67A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE03392275BCD000ED67A7 /* AppDelegate.swift */; };
 		B0FE033C2275BCD000ED67A7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE033B2275BCD000ED67A7 /* DetailViewController.swift */; };
 		B0FE033F2275BCD000ED67A7 /* Hoogle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0FE033D2275BCD000ED67A7 /* Hoogle.xcdatamodeld */; };
@@ -21,6 +22,7 @@
 		B0A1ACD4227A4090007A22B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B0A1ACD7227A43CF007A22B8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		B0B64C0F227766FD00048272 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
+		B0F53513227C93CD00F95DC4 /* ResultCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCellView.swift; sourceTree = "<group>"; };
 		B0FE03362275BCD000ED67A7 /* Hoogle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoogle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FE03392275BCD000ED67A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0FE033B2275BCD000ED67A7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				B0A1ACD4227A4090007A22B8 /* ViewController.swift */,
 				B0FE033B2275BCD000ED67A7 /* DetailViewController.swift */,
 				B0B64C0F227766FD00048272 /* SidebarViewController.swift */,
+				B0F53513227C93CD00F95DC4 /* ResultCellView.swift */,
 				B0FE03422275BCD200ED67A7 /* Main.storyboard */,
 				B0FE03462275BCD200ED67A7 /* Hoogle.entitlements */,
 				B0FE03452275BCD200ED67A7 /* Info.plist */,
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0A1ACD5227A4090007A22B8 /* ViewController.swift in Sources */,
+				B0F53514227C93CD00F95DC4 /* ResultCellView.swift in Sources */,
 				B0FE033C2275BCD000ED67A7 /* DetailViewController.swift in Sources */,
 				B0FE033F2275BCD000ED67A7 /* Hoogle.xcdatamodeld in Sources */,
 				B0FE033A2275BCD000ED67A7 /* AppDelegate.swift in Sources */,

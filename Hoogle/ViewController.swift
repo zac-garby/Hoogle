@@ -45,7 +45,12 @@ class ViewController: NSSplitViewController {
                item: "module Data.Map",
                docs: "Note: You should use Data.Map.Strict instead of this module",
                module: nil,
-               package: "containers")
+               package: "containers"),
+        Result(kind: .module,
+               item: "module Test.Module",
+               docs: "To test what happens if a result has neither module nor package",
+               module: nil,
+               package: nil)
     ]
     
     var sidebar: SidebarViewController!

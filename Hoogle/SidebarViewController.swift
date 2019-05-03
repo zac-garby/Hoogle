@@ -42,9 +42,22 @@ extension SidebarViewController: NSTableViewDelegate {
             image = NSImage(named: "type")!
         }
         
-        if let cell = tableView.makeView(withIdentifier: ident, owner: nil) as? NSTableCellView {
-            cell.textField?.stringValue = result.item
-            cell.imageView?.image = image
+        if let cell = tableView.makeView(withIdentifier: ident, owner: nil) as? ResultCellView {
+            cell.item.stringValue = result.item
+            
+            if let module = result.module {
+                cell.module.stringValue = module
+            } else {
+                cell.module.removeFromSuperview()
+            }
+            
+            if let package = result.package {
+                cell.package.stringValue = package
+            } else {
+                cell.package.removeFromSuperview()
+            }
+            
+            cell.icon.image = image
             return cell
         }
         
@@ -58,6 +71,17 @@ extension SidebarViewController: NSTableViewDataSource {
     }
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        return 20
+        let result = results[row]
+        var height = 30
+        
+        if let _ = result.package {
+            height += 15
+        }
+        
+        if let _ = result.module {
+            height += 15
+        }
+        
+        return CGFloat(height)
     }
 }
