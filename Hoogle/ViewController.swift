@@ -67,4 +67,8 @@ class ViewController: NSSplitViewController {
         sidebar.results = results
         sidebar.updateData()
     }
+    
+    func select(index: Int) {
+        print("Selected \(index)")
+    }
 }

@@ -63,6 +63,12 @@ extension SidebarViewController: NSTableViewDelegate {
         
         return nil
     }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        if resultsTable.selectedRow >= 0 {
+            (parent as! ViewController).select(index: resultsTable.selectedRow)
+        }
+    }
 }
 
 extension SidebarViewController: NSTableViewDataSource {
