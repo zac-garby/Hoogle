@@ -14,8 +14,6 @@ class DetailViewController: NSViewController, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // webView.loadHTMLString("", baseURL: nil)
     }
 }
 

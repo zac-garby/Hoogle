@@ -53,6 +53,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B0A1B918227CD24E00295092 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B0FE03392275BCD000ED67A7 /* AppDelegate.swift */,
+				B0A1ACD4227A4090007A22B8 /* ViewController.swift */,
+				B0FE033B2275BCD000ED67A7 /* DetailViewController.swift */,
+				B0B64C0F227766FD00048272 /* SidebarViewController.swift */,
+				B0F53513227C93CD00F95DC4 /* ResultCellView.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		B0FE032D2275BCD000ED67A7 = {
 			isa = PBXGroup;
 			children = (
@@ -73,11 +85,7 @@
 		B0FE03382275BCD000ED67A7 /* Hoogle */ = {
 			isa = PBXGroup;
 			children = (
-				B0FE03392275BCD000ED67A7 /* AppDelegate.swift */,
-				B0A1ACD4227A4090007A22B8 /* ViewController.swift */,
-				B0FE033B2275BCD000ED67A7 /* DetailViewController.swift */,
-				B0B64C0F227766FD00048272 /* SidebarViewController.swift */,
-				B0F53513227C93CD00F95DC4 /* ResultCellView.swift */,
+				B0A1B918227CD24E00295092 /* Source */,
 				B0FE03422275BCD200ED67A7 /* Main.storyboard */,
 				B0FE03462275BCD200ED67A7 /* Hoogle.entitlements */,
 				B0FE03452275BCD200ED67A7 /* Info.plist */,
@@ -168,11 +176,13 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/Mac/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/SwiftSoup.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftSoup.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
