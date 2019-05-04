@@ -16,4 +16,3 @@ class DetailViewController: NSViewController, WKUIDelegate {
         super.viewDidLoad()
     }
 }
-

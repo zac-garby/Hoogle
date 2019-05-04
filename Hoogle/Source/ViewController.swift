@@ -9,21 +9,6 @@
 import Cocoa
 import Alamofire
 
-enum ResultKind {
-    case function
-    case type
-    case module
-    case package
-}
-
-struct Result {
-    var kind: ResultKind
-    var item: String
-    var docs: String
-    var module: String?
-    var package: String?
-}
-
 class ViewController: NSSplitViewController {
     var results: [Result] = [
         Result(kind: .function,

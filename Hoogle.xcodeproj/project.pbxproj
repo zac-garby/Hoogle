@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B039C9D9227CECF0005A0267 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B039C9D8227CECF0005A0267 /* Result.swift */; };
 		B0A1ACD5227A4090007A22B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A1ACD4227A4090007A22B8 /* ViewController.swift */; };
 		B0A1ACD8227A43CF007A22B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A1ACD7227A43CF007A22B8 /* Alamofire.framework */; };
 		B0B64C10227766FD00048272 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B64C0F227766FD00048272 /* SidebarViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B039C9D8227CECF0005A0267 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		B0A1ACD4227A4090007A22B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B0A1ACD7227A43CF007A22B8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		B0B64C0F227766FD00048272 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				B0FE033B2275BCD000ED67A7 /* DetailViewController.swift */,
 				B0B64C0F227766FD00048272 /* SidebarViewController.swift */,
 				B0F53513227C93CD00F95DC4 /* ResultCellView.swift */,
+				B039C9D8227CECF0005A0267 /* Result.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				B0F53514227C93CD00F95DC4 /* ResultCellView.swift in Sources */,
 				B0FE033C2275BCD000ED67A7 /* DetailViewController.swift in Sources */,
 				B0FE033F2275BCD000ED67A7 /* Hoogle.xcdatamodeld in Sources */,
+				B039C9D9227CECF0005A0267 /* Result.swift in Sources */,
 				B0FE033A2275BCD000ED67A7 /* AppDelegate.swift in Sources */,
 				B0B64C10227766FD00048272 /* SidebarViewController.swift in Sources */,
 			);
