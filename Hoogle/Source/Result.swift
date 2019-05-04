@@ -16,9 +16,12 @@ enum ResultKind {
 }
 
 struct Result {
+    var url: String
     var kind: ResultKind
     var item: String
     var docs: String
     var module: String?
+    var moduleUrl: String?
     var package: String?
+    var packageUrl: String?
 }

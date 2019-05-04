@@ -370,7 +370,7 @@
                 </splitViewController>
                 <customObject id="HFp-jF-c84" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="664" y="249"/>
+            <point key="canvasLocation" x="663.5" y="248.5"/>
         </scene>
         <!--Sidebar-->
         <scene sceneID="HBB-es-AzY">
@@ -511,6 +511,9 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </searchFieldCell>
+                                <connections>
+                                    <action selector="search:" target="dAK-lU-w1R" id="jBG-ac-5cC"/>
+                                </connections>
                             </searchField>
                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="aOR-QH-hZw">
                                 <rect key="frame" x="0.0" y="439" width="287" height="5"/>

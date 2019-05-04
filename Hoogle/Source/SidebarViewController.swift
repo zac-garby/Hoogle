@@ -23,6 +23,10 @@ class SidebarViewController: NSViewController {
     func updateData() {
         resultsTable.reloadData()
     }
+    
+    @IBAction func search(_ sender: NSSearchField) {
+        (parent as! ViewController).search(for: sender.stringValue)
+    }
 }
 
 extension SidebarViewController: NSTableViewDelegate {
@@ -45,16 +49,20 @@ extension SidebarViewController: NSTableViewDelegate {
         if let cell = tableView.makeView(withIdentifier: ident, owner: nil) as? ResultCellView {
             cell.item.stringValue = result.item
             
-            if let module = result.module {
-                cell.module.stringValue = module
-            } else {
-                cell.module.removeFromSuperview()
+            if let moduleCell = cell.module {
+                if let module = result.module {
+                    moduleCell.stringValue = module
+                } else {
+                    moduleCell.removeFromSuperview()
+                }
             }
             
-            if let package = result.package {
-                cell.package.stringValue = package
-            } else {
-                cell.package.removeFromSuperview()
+            if let packageCell = cell.package {
+                if let package = result.package {
+                    packageCell.stringValue = package
+                } else {
+                    packageCell.removeFromSuperview()
+                }
             }
             
             cell.icon.image = image
