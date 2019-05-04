@@ -288,7 +288,7 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="663" y="-421"/>
+            <point key="canvasLocation" x="473" y="-833"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -341,23 +341,23 @@
             <objects>
                 <viewController title="Sidebar" id="dAK-lU-w1R" customClass="SidebarViewController" customModule="Hoogle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Rxg-aQ-BVl">
-                        <rect key="frame" x="0.0" y="0.0" width="197" height="344"/>
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="61" horizontalPageScroll="10" verticalLineScroll="61" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMm-Gh-X1q">
-                                <rect key="frame" x="0.0" y="0.0" width="197" height="344"/>
+                                <rect key="frame" x="0.0" y="0.0" width="330" height="480"/>
                                 <clipView key="contentView" id="Hff-o7-kwe">
-                                    <rect key="frame" x="0.0" y="0.0" width="197" height="344"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="330" height="480"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="59" rowSizeStyle="automatic" viewBased="YES" id="QAm-xU-IaO">
-                                            <rect key="frame" x="0.0" y="0.0" width="197" height="344"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="330" height="480"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="194" minWidth="40" maxWidth="1000" id="Uq6-5I-1AU">
+                                                <tableColumn width="327" minWidth="40" maxWidth="1000" id="Uq6-5I-1AU">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -371,7 +371,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="Result" id="sKv-GV-hUX" customClass="ResultCellView" customModule="Hoogle" customModuleProvider="target">
-                                                            <rect key="frame" x="1" y="1" width="194" height="59"/>
+                                                            <rect key="frame" x="1" y="1" width="327" height="59"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iwu-R0-KUe">
@@ -383,7 +383,7 @@
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="type" id="fe1-xw-P3W"/>
                                                                 </imageView>
                                                                 <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9QN-Cw-udW">
-                                                                    <rect key="frame" x="34" y="7" width="152" height="47"/>
+                                                                    <rect key="frame" x="34" y="7" width="285" height="47"/>
                                                                     <subviews>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lo9-Iy-bHE">
                                                                             <rect key="frame" x="-2" y="30" width="31" height="17"/>
@@ -422,7 +422,7 @@
                                                                     </customSpacing>
                                                                 </stackView>
                                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="ggy-0b-55C">
-                                                                    <rect key="frame" x="0.0" y="-2" width="194" height="5"/>
+                                                                    <rect key="frame" x="0.0" y="-2" width="327" height="5"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="1" id="unx-vn-gJL"/>
                                                                     </constraints>
@@ -457,7 +457,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="NGP-8y-uOB"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="iKP-R7-iwc">
-                                    <rect key="frame" x="0.0" y="328" width="150" height="16"/>
+                                    <rect key="frame" x="0.0" y="464" width="330" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="xce-yS-tIT">
@@ -479,14 +479,14 @@
                 </viewController>
                 <customObject id="P01-jE-SQg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1169.5" y="-134"/>
+            <point key="canvasLocation" x="1236" y="-202"/>
         </scene>
         <!--Detail-->
         <scene sceneID="sN0-Sa-TUc">
             <objects>
                 <viewController title="Detail" id="n1O-Vs-juH" customClass="DetailViewController" customModule="Hoogle" customModuleProvider="target" sceneMemberID="viewController">
                     <wkWebView key="view" wantsLayer="YES" id="a82-5O-eRA">
-                        <rect key="frame" x="0.0" y="0.0" width="470" height="353"/>
+                        <rect key="frame" x="0.0" y="0.0" width="755" height="662"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <wkWebViewConfiguration key="configuration">
                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -499,7 +499,7 @@
                 </viewController>
                 <customObject id="QPe-pH-Zd0" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1246" y="360"/>
+            <point key="canvasLocation" x="1388.5" y="514"/>
         </scene>
     </scenes>
     <resources>
