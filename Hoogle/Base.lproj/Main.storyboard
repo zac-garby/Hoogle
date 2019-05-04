@@ -521,10 +521,96 @@
                                     <constraint firstAttribute="height" constant="1" id="GHP-hv-7b1"/>
                                 </constraints>
                             </box>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GkC-dX-IXv">
+                                <rect key="frame" x="79" y="189" width="129" height="102"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qmE-c2-QZe">
+                                        <rect key="frame" x="5" y="85" width="119" height="17"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Example Searches:" id="tab-ZY-ByN">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DKA-AI-UKE">
+                                        <rect key="frame" x="49" y="68" width="31" height="17"/>
+                                        <buttonCell key="cell" type="bevel" title="map" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="kRi-kX-Ghq">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <color key="contentTintColor" name="linkColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="exampleSearch:" target="dAK-lU-w1R" id="BCD-h7-mXO"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NRW-qF-GRk">
+                                        <rect key="frame" x="0.0" y="51" width="129" height="17"/>
+                                        <buttonCell key="cell" type="bevel" title="(a -&gt; b) -&gt; [a] -&gt; [b]" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="KXe-SD-T16">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <color key="contentTintColor" name="linkColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="exampleSearch:" target="dAK-lU-w1R" id="Q7g-Zi-Ziu"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aPC-VO-B8W">
+                                        <rect key="frame" x="6" y="34" width="117" height="17"/>
+                                        <buttonCell key="cell" type="bevel" title="Ord a =&gt; [a] -&gt; [a]" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="mkp-xf-HkF">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <color key="contentTintColor" name="linkColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="exampleSearch:" target="dAK-lU-w1R" id="ETI-uw-kQQ"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DWu-dA-tO8">
+                                        <rect key="frame" x="17" y="17" width="95" height="17"/>
+                                        <buttonCell key="cell" type="bevel" title="Data.Set.insert" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="0Om-wL-MKQ">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <color key="contentTintColor" name="linkColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="exampleSearch:" target="dAK-lU-w1R" id="8aT-1i-3PR"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u9t-GE-Pf4">
+                                        <rect key="frame" x="5" y="0.0" width="119" height="17"/>
+                                        <buttonCell key="cell" type="bevel" title="+bytestring concat" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="90k-nx-MQe">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <color key="contentTintColor" name="linkColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="exampleSearch:" target="dAK-lU-w1R" id="uVB-to-3TZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="GkC-dX-IXv" firstAttribute="centerY" secondItem="Rxg-aQ-BVl" secondAttribute="centerY" id="39x-EZ-rLW"/>
                             <constraint firstAttribute="trailing" secondItem="aOR-QH-hZw" secondAttribute="trailing" id="9lN-4D-HVX"/>
                             <constraint firstItem="aOR-QH-hZw" firstAttribute="leading" secondItem="Rxg-aQ-BVl" secondAttribute="leading" id="CZX-C1-7nL"/>
+                            <constraint firstItem="GkC-dX-IXv" firstAttribute="centerX" secondItem="Rxg-aQ-BVl" secondAttribute="centerX" id="IfM-bv-GR5"/>
                             <constraint firstItem="VMm-Gh-X1q" firstAttribute="top" secondItem="aOR-QH-hZw" secondAttribute="bottom" id="JwS-dc-nNp"/>
                             <constraint firstItem="zfH-Hi-iEb" firstAttribute="top" secondItem="Rxg-aQ-BVl" secondAttribute="top" constant="8" id="ShQ-5z-Xw4"/>
                             <constraint firstAttribute="bottom" secondItem="VMm-Gh-X1q" secondAttribute="bottom" id="U8f-aw-RUc"/>
@@ -536,7 +622,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="exampleSearchView" destination="GkC-dX-IXv" id="PH8-4b-8GC"/>
                         <outlet property="resultsTable" destination="QAm-xU-IaO" id="xvL-w3-iZW"/>
+                        <outlet property="searchBar" destination="zfH-Hi-iEb" id="pB6-95-tg6"/>
                     </connections>
                 </viewController>
                 <customObject id="P01-jE-SQg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

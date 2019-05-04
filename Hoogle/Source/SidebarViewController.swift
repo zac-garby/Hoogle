@@ -10,6 +10,8 @@ import Cocoa
 
 class SidebarViewController: NSViewController {
     @IBOutlet weak var resultsTable: NSTableView!
+    @IBOutlet weak var searchBar: NSSearchField!
+    @IBOutlet weak var exampleSearchView: NSStackView!
     
     var results: [Result] = []
     
@@ -21,11 +23,17 @@ class SidebarViewController: NSViewController {
     }
     
     func updateData() {
+        exampleSearchView.isHidden = results.count > 0
         resultsTable.reloadData()
     }
     
     @IBAction func search(_ sender: NSSearchField) {
         (parent as! ViewController).search(for: sender.stringValue)
+    }
+    
+    @IBAction func exampleSearch(_ sender: NSButton) {
+        searchBar.stringValue = sender.title
+        (parent as! ViewController).search(for: sender.title)
     }
 }
 
