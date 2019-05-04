@@ -345,13 +345,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="61" horizontalPageScroll="10" verticalLineScroll="61" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMm-Gh-X1q">
-                                <rect key="frame" x="0.0" y="0.0" width="330" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="330" height="441"/>
                                 <clipView key="contentView" id="Hff-o7-kwe">
-                                    <rect key="frame" x="0.0" y="0.0" width="330" height="480"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="330" height="441"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="59" rowSizeStyle="automatic" viewBased="YES" id="QAm-xU-IaO">
-                                            <rect key="frame" x="0.0" y="0.0" width="330" height="480"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="330" height="441"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -465,11 +465,34 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfH-Hi-iEb">
+                                <rect key="frame" x="8" y="450" width="314" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="cgH-Gy-LwE"/>
+                                </constraints>
+                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="pEA-bO-V2a">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </searchFieldCell>
+                            </searchField>
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="aOR-QH-hZw">
+                                <rect key="frame" x="0.0" y="439" width="330" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="GHP-hv-7b1"/>
+                                </constraints>
+                            </box>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aOR-QH-hZw" secondAttribute="trailing" id="9lN-4D-HVX"/>
+                            <constraint firstItem="aOR-QH-hZw" firstAttribute="leading" secondItem="Rxg-aQ-BVl" secondAttribute="leading" id="CZX-C1-7nL"/>
+                            <constraint firstItem="VMm-Gh-X1q" firstAttribute="top" secondItem="aOR-QH-hZw" secondAttribute="bottom" id="JwS-dc-nNp"/>
+                            <constraint firstItem="zfH-Hi-iEb" firstAttribute="top" secondItem="Rxg-aQ-BVl" secondAttribute="top" constant="8" id="ShQ-5z-Xw4"/>
                             <constraint firstAttribute="bottom" secondItem="VMm-Gh-X1q" secondAttribute="bottom" id="U8f-aw-RUc"/>
-                            <constraint firstItem="VMm-Gh-X1q" firstAttribute="top" secondItem="Rxg-aQ-BVl" secondAttribute="top" id="Vv9-zi-sAU"/>
                             <constraint firstAttribute="trailing" secondItem="VMm-Gh-X1q" secondAttribute="trailing" id="ZcR-IF-rEV"/>
+                            <constraint firstItem="aOR-QH-hZw" firstAttribute="top" secondItem="zfH-Hi-iEb" secondAttribute="bottom" constant="8" id="fjp-n3-kAo"/>
+                            <constraint firstAttribute="trailing" secondItem="zfH-Hi-iEb" secondAttribute="trailing" constant="8" id="gJW-xx-NDg"/>
+                            <constraint firstItem="zfH-Hi-iEb" firstAttribute="leading" secondItem="Rxg-aQ-BVl" secondAttribute="leading" constant="8" id="hRh-fd-CP3"/>
                             <constraint firstItem="VMm-Gh-X1q" firstAttribute="leading" secondItem="Rxg-aQ-BVl" secondAttribute="leading" id="vUu-CU-eWO"/>
                         </constraints>
                     </view>
