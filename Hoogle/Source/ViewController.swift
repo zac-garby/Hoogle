@@ -46,6 +46,7 @@ class ViewController: NSSplitViewController {
         let params: Parameters = [
             "mode": "json",
             "hoogle": searchTerm,
+            "count": 25,
         ]
         
         AF.request("https://hoogle.haskell.org", parameters: params).responseJSON { response in
@@ -77,6 +78,16 @@ class ViewController: NSSplitViewController {
                 case "package":
                     kind = .package
                 default:
+                    // TODO: Maybe introduce a new result kind for constructors.
+                    if item.count > 3 {
+                        // Check if it's a constructor.
+                        if let itemText = try? SwiftSoup.parse(item).text() {
+                            if itemText.first!.isUppercase {
+                                kind = .type
+                            }
+                        }
+                    }
+                    
                     if item.starts(with: "<b>data") ||
                         item.starts(with: "<b>type") ||
                         item.starts(with: "<b>type family") ||
