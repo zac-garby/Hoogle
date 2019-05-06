@@ -20,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B0358EA022805D7600E795A0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B039C9D8227CECF0005A0267 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		B0A1ACD4227A4090007A22B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B0A1ACD7227A43CF007A22B8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		B0FE032D2275BCD000ED67A7 = {
 			isa = PBXGroup;
 			children = (
+				B0358EA022805D7600E795A0 /* README.md */,
 				B0FE03382275BCD000ED67A7 /* Hoogle */,
 				B0FE03372275BCD000ED67A7 /* Products */,
 				B0A1ACD6227A43CF007A22B8 /* Frameworks */,
