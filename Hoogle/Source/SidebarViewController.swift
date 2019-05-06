@@ -53,6 +53,8 @@ extension SidebarViewController: NSTableViewDelegate {
             image = NSImage(named: "package")!
         case .type:
             image = NSImage(named: "type")!
+        case .constructor:
+            image = NSImage(named: "constructor")!
         }
         
         if let cell = tableView.makeView(withIdentifier: ident, owner: nil) as? ResultCellView {

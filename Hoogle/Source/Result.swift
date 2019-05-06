@@ -13,6 +13,7 @@ enum ResultKind {
     case type
     case module
     case package
+    case constructor
 }
 
 struct Result {

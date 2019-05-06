@@ -78,12 +78,11 @@ class ViewController: NSSplitViewController {
                 case "package":
                     kind = .package
                 default:
-                    // TODO: Maybe introduce a new result kind for constructors.
                     if item.count > 3 {
                         // Check if it's a constructor.
                         if let itemText = try? SwiftSoup.parse(item).text() {
                             if itemText.first!.isUppercase {
-                                kind = .type
+                                kind = .constructor
                             }
                         }
                     }
