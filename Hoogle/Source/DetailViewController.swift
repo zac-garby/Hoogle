@@ -22,7 +22,7 @@ class DetailViewController: NSViewController, WKUIDelegate {
               "<html>"
             + "<head>"
             +   "<style>"
-            +     "html { font-family: sans-serif; }"
+            +     "html { font-family: sans-serif; padding: 20px; word-wrap: break-word; }"
             +     "h1, h2, h3 { margin-top: 5px; margin-bottom: 5px; font-weight: normal; }"
             +     "#item { font-family: Menlo; }"
             +     "#module, #package { color: rgb(128, 128, 128); }"
