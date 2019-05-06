@@ -14,11 +14,13 @@ class ViewController: NSSplitViewController {
     var results: [Result] = []
     
     var sidebar: SidebarViewController!
+    var detail: DetailViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sidebar = splitViewItems[0].viewController as? SidebarViewController
+        detail = splitViewItems[1].viewController as? DetailViewController
         
         updateData()
     }
@@ -29,7 +31,11 @@ class ViewController: NSSplitViewController {
     }
     
     func select(index: Int) {
-        print("Selected \(index)")
+        do {
+            try detail.show(results[index])
+        } catch {
+            print("Could not show document")
+        }
     }
     
     func search(for searchTerm: String) {
@@ -80,22 +86,14 @@ class ViewController: NSSplitViewController {
                     }
                 }
                 
-                do {
-                    let itemHtml = try SwiftSoup.parse(item)
-                    let itemText = try itemHtml.text()
-                    
-                    self.results.append(Result(url: url,
-                                               kind: kind,
-                                               item: itemText,
-                                               docs: docs,
-                                               module: moduleName,
-                                               moduleUrl: moduleUrl,
-                                               package: packageName,
-                                               packageUrl: packageUrl))
-                    
-                } catch {
-                    print("Couldn't parse HTML data: \(item)")
-                }
+                self.results.append(Result(url: url,
+                                           kind: kind,
+                                           item: item,
+                                           docs: docs,
+                                           module: moduleName,
+                                           moduleUrl: moduleUrl,
+                                           package: packageName,
+                                           packageUrl: packageUrl))
             }
             
             self.updateData()

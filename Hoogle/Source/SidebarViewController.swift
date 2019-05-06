@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SwiftSoup
 
 class SidebarViewController: NSViewController {
     @IBOutlet weak var resultsTable: NSTableView!
@@ -55,7 +56,12 @@ extension SidebarViewController: NSTableViewDelegate {
         }
         
         if let cell = tableView.makeView(withIdentifier: ident, owner: nil) as? ResultCellView {
-            cell.item.stringValue = result.item
+            do {
+                cell.item.stringValue = try SwiftSoup.parse(result.item).text()
+            } catch {
+                print("Couldn't parse HTML: \(result.item)")
+                cell.item.stringValue = "ERROR!"
+            }
             
             if let moduleCell = cell.module {
                 if let module = result.module {

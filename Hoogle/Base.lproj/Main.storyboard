@@ -640,7 +640,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <wkWebViewConfiguration key="configuration">
                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                            <wkPreferences key="preferences"/>
+                            <wkPreferences key="preferences" javaScriptEnabled="NO"/>
                         </wkWebViewConfiguration>
                     </wkWebView>
                     <connections>
