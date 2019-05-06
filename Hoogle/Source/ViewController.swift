@@ -38,6 +38,11 @@ class ViewController: NSSplitViewController {
         }
     }
     
+    func addResult(_ result: Result) {
+        results.append(result)
+        updateData()
+    }
+    
     func search(for searchTerm: String) {
         if searchTerm == "" {
             return
@@ -96,17 +101,15 @@ class ViewController: NSSplitViewController {
                     }
                 }
                 
-                self.results.append(Result(url: url,
-                                           kind: kind,
-                                           item: item,
-                                           docs: docs,
-                                           module: moduleName,
-                                           moduleUrl: moduleUrl,
-                                           package: packageName,
-                                           packageUrl: packageUrl))
+                self.addResult(Result(url: url,
+                                      kind: kind,
+                                      item: item,
+                                      docs: docs,
+                                      module: moduleName,
+                                      moduleUrl: moduleUrl,
+                                      package: packageName,
+                                      packageUrl: packageUrl))
             }
-            
-            self.updateData()
         }
     }
 }
