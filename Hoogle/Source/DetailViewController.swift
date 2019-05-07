@@ -26,7 +26,7 @@ class DetailViewController: NSViewController, WKUIDelegate {
             +     "h1, h2, h3 { margin-top: 5px; margin-bottom: 5px; font-weight: normal; }"
             +     "#item { font-family: Menlo; }"
             +     "#module, #package { color: rgb(128, 128, 128); }"
-            +     "s0 { color: #8e0f55; font-weight: bold; }"
+            +     "span.s0 { color: #8e0f55; font-weight: bold; }"
             +   "</style>"
             + "</head>"
             + "<body>"
